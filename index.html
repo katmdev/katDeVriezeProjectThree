@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Playfair+Display&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Playfair+Display&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <main>
+        <section class="date" id="date__current">
+        </section>
+        <section class="alarm">
+            <form class="alarm__container"action="#">
+                <fieldset>
+                    <legend class="sr-only">Set your alarm</legend>
+                    <label for="year">Year</label>
+                    <input type="text" name="year" id="year" pattern="[0-9]{4}" minlength="4" maxlength="4">
+                    <label for="month">Month</label>
+                    <input type="text" name="month" id="month" pattern="[0-9]" minlength="2" maxlength="2">
+                    <label for="day">Day</label>
+                    <input type="text" name="day" id="day" pattern="[0-9]" minlength="2" maxlength="2">
+                    <label for="hour">Hour</label>
+                    <input type="text" name="hour" id="hour" pattern="[0-9]" minlength="2" maxlength="2">
+                    <label for="minute">Minute</label>
+                    <input type="text" name="minute" id="minute" pattern="[0-9]" minlength="2" maxlength="2">
+                    <button type="submit" class="set">Set</button>
+                    <button type="reset" class="close">Close</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Click anywhere to set alarm</p>
+    </footer>
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="script.js"></script>
 </body>

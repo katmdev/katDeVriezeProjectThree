@@ -1,3 +1,37 @@
 body {
-    background-color: blue;
+    // cursor: url(../assets/tinyClock.png), auto;
+    background-color: $mainHex;
+    color: $textHex;
+    font-family: $bodyFont;
+    font-size: 62.5%;
+    margin: 0 auto;
+}
+button:hover,
+input:hover,
+label:hover {
+    // cursor: url(../assets/tinyClockHover.png), auto;
+}
+h1 {
+    font-family: $headingFont;
+    font-size: 10rem;
+    line-height: 9rem;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-weight: 500;
+    font-style: italic;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
 }
