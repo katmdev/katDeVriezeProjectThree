@@ -241,6 +241,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 62.5%;
   margin: 0 auto;
+  position: relative;
 }
 
 h1 {
@@ -254,7 +255,12 @@ h1 {
   font-style: italic;
 }
 
-main {
+body {
+  height: 100vh;
+}
+
+#date__current {
+  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,13 +268,21 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 100vh;
+}
+
+.together {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.apart {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer {
@@ -277,4 +291,11 @@ footer {
   right: 0;
   left: 0;
   text-align: center;
+}
+
+#date__alarm {
+  display: none;
+  position: absolute;
+  bottom: 30%;
+  right: 0;
 }

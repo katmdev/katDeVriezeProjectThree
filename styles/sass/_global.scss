@@ -5,6 +5,7 @@ body {
     font-family: $bodyFont;
     font-size: 62.5%;
     margin: 0 auto;
+    position: relative;
 }
 button:hover,
 input:hover,
@@ -21,12 +22,20 @@ h1 {
     font-weight: 500;
     font-style: italic;
 }
-main {
+body {
+    height: 100vh;
+}
+#date__current {
+    height: 95vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-end;
-    height: 100vh;
+}
+.together {
+    justify-content: center;
+}
+.apart {
+    justify-content: space-between;
 }
 footer {
     position: fixed;
@@ -34,4 +43,11 @@ footer {
     right: 0;
     left: 0;
     text-align: center;
+}
+#date__alarm {
+    display: none;
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+
 }
