@@ -236,56 +236,35 @@ html {
 }
 
 body {
-  background-color: #f7f7f7;
-  color: #1b1b1b;
-  font-family: "Playfair Display", serif;
   font-size: 62.5%;
+  font-family: "Anonymous Pro", monospace;
+  color: #CCCDBF;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  background: radial-gradient(circle at top left, #F0F757 0%, #0C0F0A 40%);
   margin: 0 auto;
   position: relative;
+  text-transform: uppercase;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+p, h1, h2 {
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 10rem;
-  line-height: 9rem;
-  padding: 0;
-  margin: 0;
+  font-size: 6rem;
   text-align: right;
-  font-weight: 500;
-  font-style: italic;
+  font-weight: 400;
 }
 
-body {
-  height: 100vh;
+h2 {
+  font-size: 3rem;
 }
 
-#date__current {
-  height: 95vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.together {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.apart {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-footer {
+footer, .alarm {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -293,9 +272,117 @@ footer {
   text-align: center;
 }
 
-#date__alarm {
+.wrapper {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 90vh;
+}
+
+.alarm {
   display: none;
-  position: absolute;
-  bottom: 30%;
+}
+
+input {
+  letter-spacing: inherit;
+  color: inherit;
+  text-transform: inherit;
+  text-align: center;
+  width: 98%;
+  font-family: inherit;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 0.2rem solid #F0F757;
+  background: none;
+}
+
+input:active, input:focus, input:focus-within {
+  color: #0C0F0A;
+  background: #F0F757;
+}
+
+form {
+  margin: 2rem;
+}
+
+button {
+  margin: 1rem;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  font-family: inherit;
+  width: 20%;
+  border: 0.2rem solid #F0F757;
+  background: none;
+  padding: 0.5rem;
+  color: inherit;
+}
+
+button:active, button:focus, button:focus-within {
+  color: #0C0F0A;
+  background: #F0F757;
+}
+
+.countdown__container {
+  display: block;
+}
+
+.error {
+  text-align: center;
+  padding: 1rem;
+  display: none;
+  position: fixed;
+  top: 0;
   right: 0;
+  left: 0;
+  background-color: #F0F757;
+  color: #0C0F0A;
+}
+
+@media (max-width: 1280px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .date {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 12rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .alarm {
+    background-color: #0C0F0A;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .error {
+    z-index: 10;
+    font-size: 1.4rem;
+  }
+  form {
+    margin: 1rem;
+  }
+  button {
+    width: calc(50% - 2rem);
+  }
+  .date {
+    margin-top: 20%;
+  }
 }

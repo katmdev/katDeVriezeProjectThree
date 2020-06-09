@@ -1,0 +1,32 @@
+@media (max-width: 1280px) {
+    h1 {
+        font-size: $h1SizeSmaller;
+    }
+    .date {
+        justify-content: flex-start;
+        margin-top: $bigMargin;
+    }
+
+}
+@media (max-width: 768px) {
+    .alarm {
+        background-color: $mainHex;
+    }
+    h2 {
+        font-size: $h2SizeSmaller;
+    }
+    .error {
+        z-index: 10;
+        font-size: $mobileError;
+    }
+    form {
+        margin: $marginSize;
+        }
+    button {
+        //2rem = margin
+        width: calc(50% - 2rem);
+    }
+    .date {
+        margin-top: 20%;
+    }
+}
