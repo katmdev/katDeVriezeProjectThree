@@ -209,7 +209,7 @@ alarmApp.getCountdown = () => {
         /*play alarm tone*/ 
         document.getElementById('alarmTone').play(); 
     } else {
-        /*divide seconds by number of seconds in time period, round down to get while number, subtract from countdown total*/
+        /*divide seconds by number of seconds in time period, round down to get whole number, subtract from countdown total*/
         const days =  Math.floor(difference / 86400);
         difference -= days * 86400;
         const hours = Math.floor(difference / 3600) % 24;

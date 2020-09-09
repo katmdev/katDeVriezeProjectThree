@@ -235,8 +235,11 @@ html {
   overflow: hidden;
 }
 
-body {
+html {
   font-size: 62.5%;
+}
+
+body {
   font-family: "Anonymous Pro", monospace;
   color: #CCCDBF;
   font-size: 1.6rem;
@@ -255,7 +258,7 @@ p, h1, h2 {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 7vmin;
   text-align: right;
   font-weight: 400;
 }
@@ -270,10 +273,12 @@ footer, .alarm {
   right: 0;
   left: 0;
   text-align: center;
+  font-size: 2.5rem;
 }
 
 .wrapper {
-  width: 98%;
+  width: 90%;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -321,14 +326,15 @@ form {
 }
 
 button {
+  font-size: inherit;
   margin: 1rem;
   letter-spacing: inherit;
   text-transform: inherit;
   font-family: inherit;
-  width: 20%;
   border: 0.2rem solid #F0F757;
   background: none;
-  padding: 0.5rem;
+  padding: 0.5rem 2rem;
+  min-width: 200px;
   color: inherit;
 }
 
@@ -353,18 +359,6 @@ button:active, button:focus, button:focus-within {
   color: #0C0F0A;
 }
 
-@media (max-width: 1280px) {
-  h1 {
-    font-size: 4rem;
-  }
-  .date {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-top: 12rem;
-  }
-}
-
 @media (max-width: 768px) {
   .alarm {
     background-color: #0C0F0A;
@@ -376,13 +370,7 @@ button:active, button:focus, button:focus-within {
     z-index: 10;
     font-size: 1.4rem;
   }
-  form {
-    margin: 1rem;
-  }
   button {
-    width: calc(50% - 2rem);
-  }
-  .date {
-    margin-top: 20%;
+    min-width: 125px;
   }
 }
