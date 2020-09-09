@@ -1,5 +1,8 @@
-body {
+html {
     font-size: 62.5%;
+}
+
+body {
     font-family: $bodyFont;
     color: $textHex;
     font-size: $bodySize;
@@ -29,9 +32,11 @@ footer, .alarm {
     right: 0;
     left: 0;
     text-align: center;
+    font-size: $footerSize;
 }
 .wrapper {
-    width: 98%;
+    width: 90%;
+    max-width: 1500px;
     margin: 0 auto;
 }
 .date {
@@ -66,14 +71,15 @@ form {
     margin: $marginSize2;
     }
 button {
+    font-size: inherit;
     margin: $marginSize;
     letter-spacing: inherit;
     text-transform: inherit;
     font-family: inherit;
-    width: 20%;
     border: $letterSpacing solid $accentHex;
     background: none;
-    padding: 0.5rem;
+    padding: 0.5rem 2rem;
+    min-width: 200px;
     color: inherit;
     &:active,
     &:focus,
